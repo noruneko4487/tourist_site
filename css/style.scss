@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+/* リセットcss */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, em, img, q, strong, dl, dt, dd, ol, ul, li, form, label, fieldset, legend, table, caption, tbody, tfoot, thead, tr, th, td, button {
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    
+  }
+
+/* 全体css */
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family: "Corbel Light", sans-serif;
+    background-color: #ffc933;
+    
+}
+
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+  min-width: 1400px;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* header */
+
+/* headerロゴ */
+header{
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  z-index: 10;
+  background-color: white;
+}
+
+@mixin anchor-hover {
+  opacity: 0.5;
+}
+@mixin anchor-action {
+  transition: opacity .2s ease-in-out;
+}
+
+.header-wrapper{
+  overflow: hidden;
+
+  &__title{
+    float: left;
+
+    &__anchor{
+      @include anchor-action;
+    }
+
+    &__anchor:hover{
+      @include anchor-hover;
+    }
+
+    &__logo{
+      padding-top: 13px;
+    }
+  }
+  
+}
+
+@mixin item-left {
+  margin-left: 43px;
+}
+@mixin left-padding {
+  padding-left: 5px;
+}
+.nav{
+  float: right;
+  width: 767px;
+  height: 43px;
+  margin-top: 77px;
+  font-size: 2.5rem;
+  line-height: 43px;
+
+  
+  &__list{
+
+    display: flex;
+
+    &__anchor{
+      @include anchor-action;
+
+      &:hover{
+        @include anchor-hover;
+      }
+    }
+
+    
+    
+   
+    
+      &__item--red{
+        @include left-padding;
+        border-left: 17px solid red;
+      }
+      
+      &__item--blue{
+        @include item-left;
+        @include left-padding;
+        border-left: 17px solid #00a9ff;
+      }
+
+      &__item--green{
+        @include item-left;
+        @include left-padding;
+        border-left: 17px solid #00a932;
+      }
+
+      &__item--yellow{
+        @include item-left;
+        @include left-padding;
+        border-left: 17px solid #f6ff35;
+      }
+
+      &__item--gray{
+        @include item-left;
+        @include left-padding;
+        border-left: 17px solid #c0c0c0;
+        
+      }
+    }
+  }
+
+
+/* main */
+
+main{
+  
+  padding-top: 130px;
+  height: 800px;
+}
+
+@mixin catchcopy-center {
+  text-align: center;
+}
+
+.top-section{
+  margin-top: 5%;
+  overflow: hidden;
+
+  &__catch-copy{
+    float: left;
+    margin: 5% 0 0 5%;
+    width: 43%;
+    
+    &__bubble{
+      margin: 0 0 -6% -7%;
+    width: 40%;
+    }
+
+    &__heading{
+      @include catchcopy-center;
+      font-family: 'Playball', cursive;
+    font-size: 10rem;
+    letter-spacing: 5px;
+    color: white;
+    }
+
+    &__word{
+      @include catchcopy-center;
+      font-family: "ＤＦＰ華康明朝体", serif;
+      font-size: 2rem;
+      margin-top: -5%;
+    }
+
+  }
+
+  &__eyecatch{
+    position: relative;
+    left: 50%;
+    height: 647px;
+    width: 50%;
+
+    &__person{
+      position: absolute;
+    width: 60%;
+    right: 63%;
+    top: 11%;
+      z-index: 1;
+    }
+
+    &__landscape{
+      position: absolute;
+    width: 100%;
+    right: 0%;
+    }
+
+  }
+
+}
+
+/* footer */
+
+footer{
+  height: 100px;
+}
+
+.copyright{
+  text-align: right;
+  font-size: 2rem;
+  font-family: "Arial", sans-serif;
+  color: #873600;
+  line-height: 100px;
+  padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
