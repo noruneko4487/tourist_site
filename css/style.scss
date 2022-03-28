@@ -37,6 +37,107 @@ a{
   color: #000;
 }
 
+@mixin anchor-hover {
+  opacity: 0.5;
+}
+@mixin anchor-action {
+  transition: opacity .2s ease-in-out;
+}
+
+/* モーダル */
+.campain-modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  display: none;
+  
+  &__contents-wrapper{
+    position: absolute;
+    left: 24%;
+    top: 11.1%;
+    width: 987px;
+    height: 700px;
+    background-color: #ffc933;
+
+    &__close{
+      .fa-xmark{
+        cursor: pointer;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        @include anchor-action;
+      }
+
+      .fa-xmark:hover{
+        @include anchor-hover;
+      }
+      
+    }
+    
+    
+    &__campain-name{
+      position: relative;
+    width: 800px;
+    height: 200px;
+    top: 8%;
+    left: 7%;
+      
+      &__image{
+        transform: rotate(-10deg);
+        width: 62%;
+        position: absolute;
+        box-shadow: 4px 8px 10px 0 rgba( 0, 0, 0, 0.7);
+        
+      }
+      
+      &__catch{
+        position: absolute;
+        z-index: 3;
+        top: 61%;
+        left: 49%;
+        font-size: 8rem;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+        line-height: 0.9;
+        letter-spacing: -0.7rem;
+        -webkit-text-stroke: 4px #FFF;
+        
+        
+        &--left{
+          padding-left: 90px;
+        }
+      }
+    }
+    
+    &__words{
+      padding: 237px 13px 0 0px;
+    font-size: 3rem;
+    text-align: right;
+    font-family: 'Mochiy Pop One', sans-serif;
+    letter-spacing: 0.7rem;
+    line-height: 1.2;
+
+      &--blue{
+        color: blue;
+        @include anchor-action;
+      }
+
+      &--blue:hover{
+        @include anchor-hover;
+      }
+
+    }
+    
+  }
+  
+}
+
+
+
 /* header */
 
 /* headerロゴ */
@@ -48,12 +149,7 @@ header{
   background-color: white;
 }
 
-@mixin anchor-hover {
-  opacity: 0.5;
-}
-@mixin anchor-action {
-  transition: opacity .2s ease-in-out;
-}
+
 
 .header-wrapper{
   overflow: hidden;
