@@ -4,19 +4,38 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/77c51112d2.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
         <title>tour 2022</title>
 
     </head>
     <body>
+      <!-- モーダル -->
+      <div class="campain-modal">
+        <div class="campain-modal__contents-wrapper">
+              <div class="campain-modal__contents-wrapper__close"><i class="fa-solid fa-2x fa-xmark"></i></div>
+              <div class="campain-modal__contents-wrapper__campain-name">
+                <img class="campain-modal__contents-wrapper__campain-name__image" src="img/modal_camp_photo.png">
+                <p class="campain-modal__contents-wrapper__campain-name__catch"><i class="campain-modal__contents-wrapper__campain-name__catch--left">SALE</i><br>20%OFF</p>
+              </div>
+              <p class="campain-modal__contents-wrapper__words">茨城県内観光スポットへ<br>
+                お得に行けちゃう<br>
+                キャンペーン中！<br>
+                <a class="campain-modal__contents-wrapper__words--blue" href="#">詳しくはこちら！！</a></p>
+      
+        </div>
+      </div>
+
+      <!-- ヘッダー -->
         <header>
             <div class="container">
               <div class="header-wrapper">
                 <h1 class="header-wrapper__title">
                   <a class="header-wrapper__title__anchor" href="#">
-                  <img class="header-wrapper__title__logo" src="https://github.com/noruneko4487/tourist_site/blob/main/img/logo.png?raw=true">
+                  <img class="header-wrapper__title__logo" src="img/logo.png">
                   </a>  
                 </h1>
                 <div class="nav">
@@ -31,22 +50,26 @@
               </div>
             </div> 
           </header>
+
+          <!-- コンテンツ -->
           <main>
             <div class="container">
               <section class="top-section">
                 <div class="top-section__catch-copy">
-                  <img class="top-section__catch-copy__bubble" src="https://github.com/noruneko4487/tourist_site/blob/main/img/heading_bubble.png?raw=true">
+                  <img class="top-section__catch-copy__bubble" src="img/heading_bubble.png">
                   <h2 class="top-section__catch-copy__heading">Delicious!</h2>
                   <h2 class="top-section__catch-copy__word">おいしい空気で満たす旅へ</h2>
                   
                 </div>
                 <div class="top-section__eyecatch">
-                  <img class="top-section__eyecatch__person" src="https://github.com/noruneko4487/tourist_site/blob/main/img/top_illust.png?raw=true">
-                  <img class="top-section__eyecatch__landscape" src="https://github.com/noruneko4487/tourist_site/blob/main/img/top_image.png?raw=true">
+                  <img class="top-section__eyecatch__person" src="img/top_illust.png">
+                  <img class="top-section__eyecatch__landscape" src="img/top_image.png">
                 </div>
               </section>
             </div>
           </main>
+          
+          <!-- フッター -->
           <footer>
             <div class="container">
             <p class="copyright"><i>Copyright &copy; Tour 2022,Inc All rights reserved</i></p>
@@ -54,7 +77,7 @@
           </footer>
 
 
-
+          <script src="js/modal.js"></script>
 
 
 
