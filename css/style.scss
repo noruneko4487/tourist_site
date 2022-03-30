@@ -159,6 +159,10 @@ a{
           left: 42%;
           font-size: 7rem;
 
+          &--left{
+            letter-spacing: -0.4rem;
+          }
+
         }
 
       }

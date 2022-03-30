@@ -138,6 +138,9 @@ a {
     left: 42%;
     font-size: 7rem;
   }
+  .campain-modal__contents-wrapper__campain-name__catch--left {
+    letter-spacing: -0.4rem;
+  }
   .campain-modal__contents-wrapper__words {
     padding: 164px 13px 0 0px;
     font-size: 2.3rem;
