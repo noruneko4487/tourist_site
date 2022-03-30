@@ -125,6 +125,26 @@ a {
   opacity: 0.5;
 }
 
+@media (max-width: 1400px) {
+  .campain-modal__contents-wrapper {
+    left: 17%;
+    width: 727px;
+    height: 560px;
+  }
+  .campain-modal__contents-wrapper__campain-name {
+    width: 620px;
+  }
+  .campain-modal__contents-wrapper__campain-name__catch {
+    left: 42%;
+    font-size: 7rem;
+  }
+  .campain-modal__contents-wrapper__words {
+    padding: 164px 13px 0 0px;
+    font-size: 2.3rem;
+    letter-spacing: 0.9rem;
+  }
+}
+
 /* mask */
 .mask {
   position: fixed;
