@@ -2,12 +2,12 @@
 
 /* リセットcss */
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, em, img, q, strong, dl, dt, dd, ol, ul, li, form, label, fieldset, legend, table, caption, tbody, tfoot, thead, tr, th, td, button {
-    padding: 0;
-    margin: 0;
-    font-style: normal;
-    font-weight: normal;
-    
-  }
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  
+}
 
 /* 全体css */
 
@@ -26,7 +26,16 @@ body{
   width: 95%;
   margin: 0 auto;
   min-width: 1400px;
+
 }
+
+@media (max-width: 1400px) {
+  .container{
+    width: 90%;
+    min-width: 1000px;
+  }  
+}
+
 
 li{
   list-style-type: none;
@@ -34,7 +43,6 @@ li{
 
 a{
   text-decoration: none;
-  color: #000;
 }
 
 @mixin anchor-hover {
@@ -137,6 +145,17 @@ a{
 }
 
 
+/* mask */
+.mask{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
 
 /* header */
 
@@ -152,7 +171,7 @@ header{
 
 
 .header-wrapper{
-  overflow: hidden;
+  
 
   &__title{
     float: left;
@@ -169,8 +188,37 @@ header{
       padding-top: 13px;
     }
   }
+
+  &__menu-btn{
+    border: 5px solid #000;
+    width: 50px;
+    height: 50px;
+    float: right;
+    display: none;
+    margin-top: 40px;
+
+    &__bar{
+      border-top: 5px solid #000;
+      width: 41px;
+      display: block;
+      margin-top: 18%;
+      margin-left: 5%;
+      margin-left: 8%;
+    }
+
+  }
+
+  
   
 }
+
+@media (max-width: 1400px) {
+  .header-wrapper__menu-btn{
+    display: block;
+  }  
+}
+
+
 
 @mixin item-left {
   margin-left: 43px;
@@ -193,6 +241,7 @@ header{
 
     &__anchor{
       @include anchor-action;
+      color: #000;
 
       &:hover{
         @include anchor-hover;
@@ -232,8 +281,49 @@ header{
         border-left: 17px solid #c0c0c0;
         
       }
+  }
+}
+
+@media (max-width: 1400px) {
+  .nav{
+    width: 346px;
+    height: 314px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 100px -60px 0 0;
+    display: none;
+
+    &__list{
+      display: block;
+
+      &__anchor{
+        color: #fff;
+
+        & li{
+          height: 62.4px;
+          line-height: 62.4px;
+
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.4);
+          }
+
+          &.nav__list__item{
+            &--blue, &--green, &--yellow, &--gray{
+              margin-left: 0;
+            }
+          }
+
+        }  
+      
+      }
+
     }
   }
+
+  .menu-open{
+    display: block;
+  }
+
+}
 
 
 /* main */
@@ -241,7 +331,14 @@ header{
 main{
   
   padding-top: 130px;
-  height: 800px;
+  height: 739px;
+
+}
+
+@media (max-width: 1400px) {
+  main{
+    height: 536px;
+  }
 }
 
 @mixin catchcopy-center {
@@ -287,27 +384,37 @@ main{
 
     &__person{
       position: absolute;
-    width: 60%;
-    right: 63%;
-    top: 11%;
-      z-index: 1;
+      width: 60%;
+      right: 63%;
+      top: 11%;
+      z-index: 2;
     }
 
     &__landscape{
       position: absolute;
-    width: 100%;
-    right: 0%;
+      width: 100%;
+      right: 0%;
     }
 
   }
 
 }
 
+@media (max-width: 1400px) {
+  .top-section{
+    
+    &__catch-copy{
+      
+      &__heading{
+        font-size: 6.6rem;
+      }
+    }
+  }
+}
+
 /* footer */
 
-footer{
-  height: 100px;
-}
+
 
 .copyright{
   text-align: right;
@@ -317,19 +424,6 @@ footer{
   line-height: 100px;
   padding-right: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
