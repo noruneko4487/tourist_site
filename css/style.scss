@@ -322,14 +322,17 @@ header{
     width: 346px;
     height: 314px;
     background-color: rgba(0, 0, 0, 0.7);
-    margin: 100px -60px 0 0;
-    display: none;
+    margin: 80px -60px 0 0;
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
+    
 
     &__list{
       display: block;
 
       &__anchor{
         color: #fff;
+        
 
         & li{
           height: 62.4px;
@@ -353,7 +356,9 @@ header{
   }
 
   .menu-open{
-    display: block;
+    
+    transform: translate(0, 20px);
+    opacity: 1;
   }
 
 }
