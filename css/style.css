@@ -357,10 +357,27 @@ main {
   z-index: 2;
 }
 
+.top-section__eyecatch__clich-me {
+  position: absolute;
+  z-index: 1;
+  width: 25%;
+  top: 8%;
+  left: 17%;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  /*&:hover{
+        width: 30%;
+      }*/
+}
+
 .top-section__eyecatch__landscape {
   position: absolute;
   width: 100%;
   right: 0%;
+}
+
+.dialogue-anime {
+  width: 30%;
 }
 
 @media (max-width: 1400px) {

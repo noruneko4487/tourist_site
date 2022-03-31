@@ -428,6 +428,20 @@ main{
       z-index: 2;
     }
 
+    &__clich-me{
+      position: absolute;
+      z-index: 1;
+      width: 25%;
+      top: 8%;
+      left: 17%;
+      transition: width .5s;
+
+      /*&:hover{
+        width: 30%;
+      }*/
+
+    }
+
     &__landscape{
       position: absolute;
       width: 100%;
@@ -437,6 +451,12 @@ main{
   }
 
 }
+
+.dialogue-anime{
+  width: 30%;
+}
+
+
 
 @media (max-width: 1400px) {
   .top-section{
